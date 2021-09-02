@@ -10,6 +10,10 @@ body {
   color: white;
 }
 
+br {
+  display: none;
+}
+
 .outer-wrapper {
   /* width: 100vw; */
   height: 100vh;
@@ -56,7 +60,7 @@ slide.end {
 
 .content h1 {
   font-weight: normal;
-  font-size: 32px;
+  font-size: 35px;
   /* margin: 0; */
 }
 
@@ -100,6 +104,9 @@ slide.end {
 }
 
 @media screen and (min-width: 768px) {
+  br {
+    display: block;
+  }
   .outer-wrapper {
     width: 100vh;
     height: 100vw;
