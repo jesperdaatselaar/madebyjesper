@@ -5,4 +5,95 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  background-color: #10171d;
+  /* color: #dcf763; */
+  color: white;
+}
+
+.outer-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 400vh;
+}
+
+slide {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+slide.end {
+  background-color: #dcf763;
+  color: #10171d;
+}
+
+.langselect {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+}
+
+.langselect a {
+  text-decoration: none;
+  color: white;
+}
+
+.langselect .active {
+  font-weight: bold;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content h1 {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.content h1 span {
+  color: #dcf763;
+}
+
+.next {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icons {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  width: 90%;
+  left: 5%;
+}
+
+.icons a {
+  text-align: center;
+  flex: 1;
+  color: #10171d;
+}
+
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: 500;
+  color: #dcf763;
+}
+
+.end .logo {
+  color: #10171d;
 }
