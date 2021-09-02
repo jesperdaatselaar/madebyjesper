@@ -126,4 +126,19 @@ slide.end {
   slide {
     width: 100vw;
   }
+
+  .content h1 {
+    font-size: 64px;
+  }
+
+  .next {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+  }
+
+  .next i {
+    transform: rotate(-90deg);
+    font-size: 24px;
+  }
 }
