@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/a39a477e88.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="outer-wrapper">
-      <div class="wrapper">
-        <!-- Start -->
-        <slide>
-          <span class="langselect">
-            <a class="active" href="#EN">EN</a>
-            |
-            <a href="#NL">NL</a>
-          </span>
-          <div class="content">
-            <h1>
-              Hey, I'm Jesper <br />
-              from <span>daatselaar.dev</span>
-            </h1>
-            <p>Click <strong>any</strong> word to learn more</p>
-          </div>
-          <div class="next"><i class="fas fa-arrow-down"></i></div>
-        </slide>
-        <!-- Introduce -->
-        <slide>
-          <span class="logo">daatselaar.dev</span>
-          <div class="content">
-            <h1>
-              I am a <span>student</span>, <br />
-              <span>photographer</span> & <br />
-              <span>web developer</span> from <br />
-              the Netherlands
-            </h1>
-            <p>Click <strong>any</strong> word to learn more</p>
-          </div>
-          <div class="next"><i class="fas fa-arrow-down"></i></div>
-        </slide>
-        <!-- Cool right -->
-        <slide>
-          <span class="logo">daatselaar.dev</span>
-          <div class="content">
-            <h1><span>Cool right?</span> <br />Let’s work out your ideas.</h1>
-            <p>Click <strong>any</strong> word to learn more</p>
-          </div>
-          <div class="next"><i class="fas fa-arrow-down"></i></div>
-        </slide>
-        <!-- End -->
-        <slide class="end">
-          <span class="logo">daatselaar.dev</span>
-          <div class="content">
-            <h1>Unfortunately you have reached the end!</h1>
-            <p>You can reach out to me via email or my socials.</p>
-          </div>
-          <div class="icons">
-            <a href="#"><i class="fas fa-at"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
-        </slide>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/a39a477e88.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="outer-wrapper">
+    <div class="wrapper">
+      <!-- Start -->
+      <slide id="home">
+        <span class="binary">01100100 01100001 01100001 01110100 01110011 <br />
+          01100101 01101100 01100001 01100001 01110010 <br />
+          00101110 01100100 01100101 01110110 00001010
+        </span>
+        <span class="langselect">
+          <a class="active" href="#EN">EN</a>
+          |
+          <a href="#NL">NL</a>
+        </span>
+        <div class="content">
+          <h1>
+            Hey, I'm Jesper <br />
+            from <span>daatselaar.dev</span>
+          </h1>
+          <p>Click <strong>any</strong> word to learn more</p>
+        </div>
+        <a href="#intro" class="next"><i class="fas fa-arrow-down"></i></a>
+      </slide>
+      <!-- Introduce -->
+      <slide id="intro">
+        <span class="binary">01100100 01100001 01100001 01110100 01110011 <br />
+          01100101 01101100 01100001 01100001 01110010 <br />
+          00101110 01100100 01100101 01110110 00001010
+        </span>
+        <span class="logo">daatselaar.dev</span>
+        <div class="content">
+          <h1>
+            I am a <span>student</span>, <br />
+            <span>photographer</span> & <br />
+            <span>web developer</span> from <br />
+            the Netherlands
+          </h1>
+          <p>Click <strong>any</strong> word to learn more</p>
+        </div>
+        <a href="#cool" class="next"><i class="fas fa-arrow-down"></i></a>
+      </slide>
+      <!-- Cool right -->
+      <slide id="cool">
+        <span class="binary">01100100 01100001 01100001 01110100 01110011 <br />
+          01100101 01101100 01100001 01100001 01110010 <br />
+          00101110 01100100 01100101 01110110 00001010
+        </span>
+        <span class="logo">daatselaar.dev</span>
+        <div class="content">
+          <h1><span>Cool right?</span> <br />Let’s work out your ideas.</h1>
+          <p>Click <strong>any</strong> word to learn more</p>
+        </div>
+        <a href="#end" class="next"><i class="fas fa-arrow-down"></i></a>
+      </slide>
+      <!-- End -->
+      <slide id="end" class="end">
+        <span class="binary">01100100 01100001 01100001 01110100 01110011 <br />
+          01100101 01101100 01100001 01100001 01110010 <br />
+          00101110 01100100 01100101 01110110 00001010
+        </span>
+        <span class="logo">daatselaar.dev</span>
+        <div class="content">
+          <h1>Unfortunately you have reached the end!</h1>
+          <p>You can reach out to me via email or my socials.</p>
+        </div>
+        <div class="icons">
+          <a href="#"><i class="fas fa-at"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+
+        <a href="#home" class="next back"><i class="fas fa-home"></i></a>
+      </slide>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

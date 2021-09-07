@@ -1,151 +1,203 @@
 /* Mobile first CSS */
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  background-color: #10171d;
-  /* color: #dcf763; */
-  color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #10171d;
+    /* color: #dcf763; */
+    color: white;
 }
 
 br {
-  display: none;
+    display: none;
 }
 
 .outer-wrapper {
-  /* width: 100vw; */
-  height: 100vh;
+    /* width: 100vw; */
+    height: 100vh;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 400vh;
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
+}
+
+.binary {
+    display: none;
 }
 
 slide {
-  height: 100vh;
-  position: relative;
+    height: 100vh;
+    position: relative;
 }
 
 slide.end {
-  background-color: #dcf763;
-  color: #10171d;
+    background-color: #dcf763;
+    color: #10171d;
 }
 
 .langselect {
-  position: absolute;
-  top: 10%;
-  right: 15%;
+    position: absolute;
+    top: 10%;
+    right: 15%;
 }
 
 .langselect a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .langselect .active {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
 }
 
 .content h1 {
-  font-weight: normal;
-  font-size: 35px;
-  /* margin: 0; */
+    font-weight: normal;
+    font-size: 35px;
+    /* margin: 0; */
 }
 
 .content h1 span {
-  color: #dcf763;
+    color: #dcf763;
 }
 
 .next {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.next.back {
+    display: none;
+}
+
+.next:hover {
+    color: #dcf763;
 }
 
 .icons {
-  position: absolute;
-  bottom: 10%;
-  display: flex;
-  width: 90%;
-  left: 5%;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    width: 90%;
+    left: 5%;
 }
 
 .icons a {
-  text-align: center;
-  flex: 1;
-  color: #10171d;
+    text-align: center;
+    flex: 1;
+    color: #10171d;
 }
 
 .logo {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  font-weight: 500;
-  color: #dcf763;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 500;
+    color: #dcf763;
 }
 
 .end .logo {
-  color: #10171d;
+    color: #10171d;
 }
 
 @media screen and (min-width: 768px) {
-  br {
-    display: block;
-  }
-  .outer-wrapper {
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .outer-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-
-  .wrapper {
-    flex-direction: row;
-    width: 400vw;
-    height: 100vh;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-  }
-  slide {
-    width: 100vw;
-  }
-
-  .content h1 {
-    font-size: 64px;
-  }
-
-  .next {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-  }
-
-  .next i {
-    transform: rotate(-90deg);
-    font-size: 24px;
-  }
+    br {
+        display: block;
+    }
+    .logo {
+        display: none;
+    }
+    .binary {
+        display: block;
+        transform: rotate(-90deg);
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        font-weight: 500;
+    }
+    .end .binary {
+        color: black;
+    }
+    .outer-wrapper {
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+    }
+    .outer-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    .wrapper {
+        flex-direction: row;
+        width: 400vw;
+        height: 100vh;
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+    }
+    slide {
+        width: 100vw;
+        height: 100vh;
+    }
+    .content {
+        width: 40vw;
+        margin: 0;
+    }
+    .content h1 {
+        font-size: 64px;
+    }
+    .next {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+    }
+    .next i {
+        transform: rotate(-90deg);
+        font-size: 24px;
+        transition: 300ms;
+    }
+    .next.back {
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        color: #10171d;
+        display: block;
+    }
+    .next.back i {
+        transform: rotate(0deg);
+    }
+    .next.back:hover {
+        color: #999;
+    }
+    .icons a {
+        text-align: center;
+        flex: 1;
+        color: #10171d;
+    }
+    .icons a i {
+        font-size: 24px;
+    }
 }
