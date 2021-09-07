@@ -17,6 +17,7 @@ br {
 .outer-wrapper {
     /* width: 100vw; */
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -48,10 +49,18 @@ slide.end {
 .langselect a {
     text-decoration: none;
     color: white;
+    border-bottom: 1px solid transparent;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.langselect a:hover {
+    border-color: white;
 }
 
 .langselect .active {
     font-weight: bold;
+    color: #dcf763;
 }
 
 .content {
@@ -80,8 +89,15 @@ slide.end {
     color: white;
 }
 
-.next.back {
-    display: none;
+.back {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid transparent;
+    transition: 200ms;
+}
+
+.back:hover {
+    border-color: black;
 }
 
 .next:hover {
@@ -117,6 +133,41 @@ slide.end {
 }
 
 @media screen and (min-width: 768px) {
+    .corners {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+    }
+    .corners.left {
+        top: 50px;
+        left: 50px;
+    }
+    .corners.right {
+        bottom: 50px;
+        right: 50px;
+        transform: rotate(-180deg);
+    }
+    .corners .inner {
+        position: absolute;
+    }
+    .corners.left .inner {
+        top: 8px;
+        left: 8px;
+    }
+    .corners.right .inner {
+        bottom: 5px;
+        right: 8px;
+    }
+    .corners .vertical {
+        background-color: #dcf763;
+        width: 3px;
+        height: 15px;
+    }
+    .corners .horizontal {
+        background-color: #dcf763;
+        width: 15px;
+        height: 3px;
+    }
     br {
         display: block;
     }
@@ -145,7 +196,6 @@ slide.end {
         position: absolute;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        scroll-behavior: smooth;
     }
     .outer-wrapper::-webkit-scrollbar {
         display: none;
@@ -177,20 +227,6 @@ slide.end {
         transform: rotate(-90deg);
         font-size: 24px;
         transition: 300ms;
-    }
-    .next.back {
-        font-size: 24px;
-        position: absolute;
-        top: 50%;
-        left: 90%;
-        color: #10171d;
-        display: block;
-    }
-    .next.back i {
-        transform: rotate(0deg);
-    }
-    .next.back:hover {
-        color: #999;
     }
     .icons a {
         text-align: center;
