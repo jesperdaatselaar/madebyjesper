@@ -6,6 +6,9 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #10171d, #000);
+  background: url("./images/bghome.jpg");
+  background-size: cover;
+  background-position: center center;
   color: white;
   height: 100vh;
 }
@@ -57,9 +60,6 @@ header .socials {
   width: 80px;
   display: flex;
   justify-content: space-between;
-}
-
-header .socials a {
 }
 
 header .bread {
