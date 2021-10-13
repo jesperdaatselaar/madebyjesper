@@ -13,6 +13,7 @@ body {
 a {
   text-decoration: none;
   color: white;
+  transition: 250ms;
 }
 /* Mobile first */
 
@@ -76,6 +77,19 @@ main {
   position: absolute;
   top: 100px;
   left: 100px;
+}
+
+a#about:hover,
+a#emailIcon:hover {
+  color: red;
+}
+a#projects:hover,
+a#instagramIcon:hover {
+  color: #f7347a;
+}
+a#photos:hover,
+a#linkedinIcon:hover {
+  color: skyblue;
 }
 
 @media only screen and (min-width: 1278px) {
