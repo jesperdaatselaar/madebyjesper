@@ -135,4 +135,9 @@ main {
   header .socials a {
     font-size: 22px;
   }
+
+  main {
+    top: 150px;
+    left: 300px;
+  }
 }
