@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "madebyjesper",
+  "description": "Portfolio site of Jesper van Daatselaar",
+  "version": "0.1.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesperdaatselaar/madebyjesper.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Jesper van Daatselaar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesperdaatselaar/madebyjesper/issues"
+  },
+  "homepage": "https://github.com/jesperdaatselaar/madebyjesper#readme"
+}
