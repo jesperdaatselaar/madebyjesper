@@ -8,7 +8,8 @@ const routes = {
 const rootDiv = document.getElementById("root");
 rootDiv.innerHTML = routes[window.location.pathname];
 
-const navigate = (pathname) => {
+const navigate = (e, pathname) => {
+  e.preventDefault();
   window.history.pushState({}, pathname, window.location.origin + pathname);
   rootDiv.innerHTML = routes[pathname];
 };
@@ -21,6 +22,7 @@ const about = document.getElementById("about");
 const photos = document.getElementById("photos");
 const projects = document.getElementById("projects");
 
-about.onclick = () => navigate("/about");
-photos.onclick = () => navigate("/photos");
-projects.onclick = () => navigate("/projects");
+home.onclick = (e) => navigate(e, "/");
+about.onclick = (e) => navigate(e, "/about");
+photos.onclick = (e) => navigate(e, "/photos");
+projects.onclick = (e) => navigate(e, "/projects");
