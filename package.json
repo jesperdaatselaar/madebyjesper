@@ -3,13 +3,16 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "name": "madebyjesper",
   "description": "Portfolio site of Jesper van Daatselaar",
   "version": "0.1.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^2.0.13"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jesperdaatselaar/madebyjesper.git"
