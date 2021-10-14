@@ -3,7 +3,7 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "if [$NODE_ENV == 'production']; then node app.js; else nodemon server.js; fi"
   },
   "name": "madebyjesper",
   "description": "Portfolio site of Jesper van Daatselaar",
