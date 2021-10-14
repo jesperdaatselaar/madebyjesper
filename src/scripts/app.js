@@ -12,6 +12,7 @@ const navigate = (e, pathname) => {
   e.preventDefault();
   window.history.pushState({}, pathname, window.location.origin + pathname);
   rootDiv.innerHTML = routes[pathname];
+  changeName();
 };
 
 window.onpopstate = () => {
@@ -26,3 +27,15 @@ home.onclick = (e) => navigate(e, "/");
 about.onclick = (e) => navigate(e, "/about");
 photos.onclick = (e) => navigate(e, "/photos");
 projects.onclick = (e) => navigate(e, "/projects");
+
+const changeName = () => {
+  let pathname = window.location.pathname;
+  document.getElementById("breadcrumb").innerHTML = pathname;
+  if (pathname == "/") pathname = "/home";
+  document.title =
+    pathname.slice(1).charAt(0).toUpperCase() +
+    pathname.slice(2) +
+    " - Made by Jesper";
+};
+
+changeName();
