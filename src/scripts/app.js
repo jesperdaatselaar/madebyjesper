@@ -6,7 +6,11 @@ const routes = {
 };
 
 const rootDiv = document.getElementById("root");
-rootDiv.innerHTML = routes[window.location.pathname];
+if (!routes[window.location.pathname]) {
+  rootDiv.innerHTML = "404 This page can't be found";
+} else {
+  rootDiv.innerHTML = routes[window.location.pathname];
+}
 
 const navigate = (e, pathname) => {
   e.preventDefault();
