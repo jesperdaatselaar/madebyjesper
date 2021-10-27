@@ -9,7 +9,7 @@ const requestContent = (fileName) => {
 const routes = {
   "/": "home",
   "/about": requestContent("about"),
-  "/projects": requestContent("projects)"),
+  "/projects": requestContent("projects"),
   "/photos": requestContent("photos"),
 };
 
