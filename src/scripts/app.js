@@ -1,8 +1,16 @@
+const requestContent = (fileName) => {
+  let url = `../routes/${fileName}.html`;
+  let req = new XMLHttpRequest();
+  req.open("GET", url, false);
+  req.send()
+  return req.responseText;
+}
+  
 const routes = {
   "/": "home",
-  "/about": "about",
-  "/projects": "projects",
-  "/photos": "photos",
+  "/about": requestContent("about"),
+  "/projects": requestContent("projects)"),
+  "/photos": requestContent("photos"),
 };
 
 const rootDiv = document.getElementById("root");
