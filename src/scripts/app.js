@@ -7,7 +7,7 @@ const requestContent = (fileName) => {
 }
   
 const routes = {
-  "/": "home",
+  "/": requestContent("home"),
   "/about": requestContent("about"),
   "/projects": requestContent("projects"),
   "/photos": requestContent("photos"),
