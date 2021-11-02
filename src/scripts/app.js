@@ -5,12 +5,10 @@ const photos = document.getElementById("photos");
 const projects = document.getElementById("projects");
 
 home.onclick = (e) => {
-  console.log("Home clicked");
   e.preventDefault();
   navigate("/");
 };
 about.onclick = (e) => {
-  console.log("about clicked");
   e.preventDefault();
   navigate("/about");
 };
