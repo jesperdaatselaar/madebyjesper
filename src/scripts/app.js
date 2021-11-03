@@ -86,10 +86,7 @@ const navigate = (pathname) => {
 };
 
 window.onpopstate = () => {
-  root.innerHTML = navigate(window.location.pathname);
+  navigate(window.location.pathname);
 };
 
 navigate(window.location.pathname);
-
-
-// TODO: FIX HISTORY CLICK NOT SHOWING PHOTOS
