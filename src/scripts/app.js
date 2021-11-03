@@ -15,10 +15,12 @@ about.onclick = (e) => {
 photos.onclick = (e) => {
   e.preventDefault();
   navigate("/photos");
+  getPhotos();
 };
 projects.onclick = (e) => {
   e.preventDefault();
   navigate("/projects");
+  getProjects();
 };
 
 const navigate = (pathname) => {
@@ -30,17 +32,23 @@ const navigate = (pathname) => {
   let req = new XMLHttpRequest();
   req.open("GET", url, false);
   req.send();
-  root.innerHTML = req.responseText;;
+  root.innerHTML = req.responseText;
   // Change naming
   document.getElementById("breadcrumb").innerHTML = pathname;
   document.title =
-    pagename.charAt(0).toUpperCase() +
-    pagename.slice(1) +
-    " - Made by Jesper";
+    pagename.charAt(0).toUpperCase() + pagename.slice(1) + " - Made by Jesper";
 };
 
 window.onpopstate = () => {
   root.innerHTML = navigate(window.location.pathname);
 };
 
-navigate(window.location.pathname)
+navigate(window.location.pathname);
+
+const getPhotos = () => {
+  let container = document.getElementById("photos-container");
+};
+
+const getProjects = () => {
+  let container = document.getElementById("projects-container");
+};
