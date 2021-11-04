@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
     <title>Home - Made by Jesper</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GZY668BLF"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GZY668BLF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'G-1GZY668BLF');
-    </script>
+    </script> -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -42,16 +42,16 @@
     <aside>
       <div class="logo">
         <a id="home" href="/"
-          ><img src="./images/logo.png" alt="made by jesper logo"/>
+          ><img src="/images/logo.png" alt="made by jesper logo" />
         </a>
       </div>
       <div class="links">
-        <a href="/about" id="about">about</a>
-        <a href="/projects" id="projects">projects</a>
-        <a href="photos" id="photos">photos</a>
+        <a href="/about" data-link>about</a>
+        <a href="/projects" data-link>projects</a>
+        <a href="photos" data-link>photos</a>
       </div>
     </aside>
     <main id="root"></main>
-    <script src="/scripts/app.js"></script>
+    <script type="module" src="/static/scripts/app.js"></script>
   </body>
 </html>
