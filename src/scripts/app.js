@@ -91,6 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.matches("[data-link]")) {
       e.preventDefault();
       navigateTo(e.target.href);
+    } else if (e.target.parentNode.matches("[data-link]")) {
+      e.preventDefault();
+      navigateTo(e.target.parentNode.href);
+      scrollTo(top);
     }
   });
 
