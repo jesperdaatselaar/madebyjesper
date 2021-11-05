@@ -1,0 +1,15 @@
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+  constructor(params) {
+    super(params);
+    this.projectId = params.id;
+    this.setTitle(`Project ${this.projectId} - Made by Jesper`);
+    console.log(params.id);
+  }
+
+  async getHTML() {
+    return `<h1>Project</h1>
+            <p>You are viewing project #${this.projectId}.</p>`;
+  }
+}
