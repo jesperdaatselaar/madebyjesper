@@ -5,7 +5,7 @@ export default class extends AbstractView {
   constructor(params) {
     super(params);
     this.photo = photos.find((p) => p.id === params.id);
-    this.setTitle(`Photo ${this.photoId} - Made by Jesper`);
+    this.setTitle(`Photo ${this.photo.id} - Made by Jesper`);
   }
 
   async getHTML() {
