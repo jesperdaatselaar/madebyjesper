@@ -1,16 +1,18 @@
 import AbstractView from "./AbstractView.js";
+import photos from "../data/photos.js";
 
 export default class extends AbstractView {
   constructor(params) {
     super(params);
-    this.photoId = params.id;
-    this.setTitle("Project - Made by Jesper");
+    this.photo = photos.find((p) => p.id === params.id);
+    this.setTitle(`Photo ${this.photoId} - Made by Jesper`);
   }
 
-  async getHtml() {
+  async getHTML() {
     return `
-            <h1>Photo</h1>
-            <p>You are viewing Photo #${this.photoId}.</p>
-        `;
+    <img src="${this.photo.path}">
+    <h1>${this.photo.name}</h1>
+    <p>${this.photo.description}</p>
+    `;
   }
 }
