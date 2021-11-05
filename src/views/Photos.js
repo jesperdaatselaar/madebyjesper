@@ -4,6 +4,9 @@ export default class extends AbstractView {
   constructor() {
     super();
     this.setTitle("Photos - Made by Jesper");
+    this.setDescription(
+      "This is the photo gallery page. Here I highlight my best photos",
+    );
     this.photos = photos;
   }
 
