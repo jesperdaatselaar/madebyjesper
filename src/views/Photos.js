@@ -1,5 +1,15 @@
 import AbstractView from "./AbstractView.js";
 import photos from "../data/photos.js";
+
+let css = `
+  photolist {
+    width: 80%;
+  }
+
+  img {
+    width: 800px;
+  }
+`;
 export default class extends AbstractView {
   constructor() {
     super();
@@ -8,6 +18,7 @@ export default class extends AbstractView {
       "This is the photo gallery page. Here I highlight my best photos",
     );
     this.photos = photos;
+    this.setStyle(css);
   }
 
   async getHTML() {
@@ -17,6 +28,6 @@ export default class extends AbstractView {
         `<a data-link href="/photos/${this.photos[i].id}"><img src="${this.photos[i].path}"></a>`,
       );
     }
-    return output.join("\n");
+    return `<div class="photolist">${output.join("\n")}</div>`;
   }
 }
